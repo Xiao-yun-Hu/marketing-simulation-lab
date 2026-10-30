@@ -518,7 +518,7 @@ function restartScan(){
 
 function setScene(n){
   scene=n;
-  if(window.gtag)gtag('event','scanner_scene_view',{scene_index:n});
+  if(window.gtag)gtag('event','scanner_scene_view',{scene_index:n,experiment_variant:'b'});
   const s=SCENES[n];
   $('sceneNum').textContent=s.n;
   $('sceneTitle').textContent=s.title;
@@ -551,18 +551,18 @@ function advance(){
 $('next').onclick=advance;
 $('rerun').onclick=()=>setScene(0);
 $('variable').onclick=()=>setScene(2);
-$('exploreResearch').onclick=()=>{if(window.gtag)gtag('event','cta_click',{cta_label:'EXPLORE RESEARCH'});document.querySelector('#research').scrollIntoView({behavior:'smooth'})};
+$('exploreResearch').onclick=()=>{if(window.gtag)gtag('event','cta_click',{cta_label:'EXPLORE RESEARCH',experiment_variant:'b'});document.querySelector('#research').scrollIntoView({behavior:'smooth'})};
 $('copy').onclick=()=>{
-  if(window.gtag)gtag('event','partnership_intro_copy');
+  if(window.gtag){gtag('event','partnership_intro_copy',{experiment_variant:'b'});gtag('event','lead_submit',{experiment_variant:'b',lead_type:'copy_intro'})}
   const txt="Hello, I'm interested in exploring a landing-page optimization experiment with Marketing Simulation Lab. I'd love to learn more about a potential collaboration.\n\nPlease reach out to rachel.qrd@gmail.com.";
   navigator.clipboard?.writeText(txt).then(()=>$('copyStatus').textContent='Copied — paste into your preferred email or message app.').catch(()=>$('copyStatus').textContent=txt);
 };
-$('contactLink').onclick=e=>{e.preventDefault();if(window.gtag)gtag('event','cta_click',{cta_label:'PARTNER WITH US'});document.querySelector('#partner').scrollIntoView({behavior:'smooth'})};
+$('contactLink').onclick=e=>{e.preventDefault();if(window.gtag)gtag('event','cta_click',{cta_label:'PARTNER WITH US',experiment_variant:'b'});document.querySelector('#partner').scrollIntoView({behavior:'smooth'})};
 // Generic CTA tracker for the scene-advance HUD buttons and the nav anchor links.
 document.querySelectorAll('#next, #rerun, #variable, nav a').forEach(el=>{
   el.addEventListener('click',()=>{
     if(!window.gtag)return;
-    gtag('event','cta_click',{cta_label:el.textContent.trim().replace(/\s+/g,' ')});
+    gtag('event','cta_click',{cta_label:el.textContent.trim().replace(/\s+/g,' '),experiment_variant:'b'});
   });
 });
 
