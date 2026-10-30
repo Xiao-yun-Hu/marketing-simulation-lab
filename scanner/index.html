@@ -571,6 +571,18 @@ window.addEventListener('keydown',e=>{
 });
 window.addEventListener('resize',()=>{if(scene===2&&!reducedMotion){/* keep current mark position roughly correct */}});
 
+// Header is position:absolute (overlays rather than pushing layout down), so its real
+// height has to be measured and fed back in — a fixed CSS guess breaks the moment the
+// brand name or the Partner button wraps to a second line, which happens well before
+// any of the tested breakpoints (e.g. at a plain 375px phone width).
+function syncHeaderOffset(){
+  const h=document.querySelector('header').getBoundingClientRect().height;
+  document.getElementById('heroLeft').style.paddingTop=(h+16)+'px';
+}
+syncHeaderOffset();
+window.addEventListener('resize',syncHeaderOffset);
+new ResizeObserver(syncHeaderOffset).observe(document.querySelector('header'));
+
 setScene(0);
 })();
 </script>
