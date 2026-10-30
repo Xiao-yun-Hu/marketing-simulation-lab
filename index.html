@@ -1,4 +1,8 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#070909"><meta name="description" content="Marketing Simulation Lab — consumer simulation for better commerce decisions. Diagnose, simulate, validate."><title>Marketing Simulation Lab — Know what moves buyers.</title><style>
+<!doctype html><html lang="en"><head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-589QHZSK1R"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-589QHZSK1R');</script>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#070909"><meta name="description" content="Marketing Simulation Lab — consumer simulation for better commerce decisions. Diagnose, simulate, validate."><title>Marketing Simulation Lab — Know what moves buyers.</title><style>
 :root{--bg:#070909;--ink:#f0f3ee;--muted:#9da8a3;--line:#29302c;--lime:#d5f85e}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}header{position:fixed;z-index:20;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:22px 4vw;background:linear-gradient(#070909e8,#07090940);backdrop-filter:blur(9px);border-bottom:1px solid #ffffff14}.logo{font-size:13px;letter-spacing:.23em;font-weight:700}.mark{color:var(--lime);font-size:25px;vertical-align:middle;margin-right:12px}nav{display:flex;gap:30px}nav a{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#c2c9c4}nav a:hover{color:var(--lime)}.outline,.solid{border:1px solid #747f73;background:transparent;color:white;padding:15px 22px;text-transform:uppercase;letter-spacing:.14em;font-size:11px;transition:.2s}.outline:hover{border-color:var(--lime);color:var(--lime)}.solid{background:var(--lime);color:#0b0c08;border-color:var(--lime);font-weight:700}.solid:hover{background:#efffae}.hero{height:min(900px,100svh);min-height:680px;position:relative;overflow:hidden;display:flex;align-items:center}#world{position:absolute;inset:0;width:100%;height:100%;opacity:.98}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#070909 0%,#070909ed 20%,#07090970 48%,transparent 78%);pointer-events:none}.hero-content{position:relative;z-index:2;padding:9vh 4vw 0;width:min(640px,70vw);pointer-events:none}.hero-content button,.hero-content a{pointer-events:auto}.eyebrow,.mono{font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:.18em;font-size:11px;color:var(--lime)}h1{font-size:clamp(57px,7.7vw,128px);line-height:.91;letter-spacing:-.075em;margin:27px 0;font-weight:500}h1 em{font-style:normal;color:var(--lime)}.lede{font-size:clamp(16px,1.5vw,21px);color:#bdc6bf;max-width:490px;line-height:1.55}.actions{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}.hero-bottom{position:absolute;z-index:3;bottom:28px;left:4vw;right:4vw;display:flex;justify-content:space-between;align-items:end;color:#9ba69e;font:11px 'Courier New',monospace;letter-spacing:.08em}.hero-bottom strong{color:var(--lime)}section{padding:110px 6vw;border-top:1px solid var(--line)}.section-label{font:12px 'Courier New',monospace;letter-spacing:.16em;color:var(--lime);margin-bottom:26px}.big{font-size:clamp(42px,6.3vw,98px);font-weight:500;letter-spacing:-.065em;line-height:1.03;max-width:1100px;margin:0 0 35px}.copy{font-size:19px;line-height:1.65;color:#aeb9b0;max-width:720px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:55px}.cell{background:var(--bg);padding:32px;min-height:245px}.num{font:12px 'Courier New',monospace;color:var(--lime)}.cell h3{font-size:26px;font-weight:500;letter-spacing:-.035em;margin:32px 0 12px}.cell p{font-size:15px;line-height:1.65;color:#aeb9b0}.lab{background:#0b0e0c}.lab-layout{display:grid;grid-template-columns:1fr 1.15fr;gap:5vw;align-items:start}.switches{display:flex;flex-wrap:wrap;gap:9px;margin:30px 0}.switches button{border:1px solid #4b544b;color:#b7c0b7;background:transparent;padding:12px 15px;font:12px 'Courier New',monospace}.switches button.active{border-color:var(--lime);background:var(--lime);color:#111}
 .fork-layout{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:start;margin-top:10px}
 .pc-mini-label{font:11px 'Courier New',monospace;letter-spacing:.1em;color:#8a978d;margin-bottom:14px}
@@ -30,6 +34,7 @@ const SCENARIOS={
   returns:{module:'<span class="changed">✓ Free 30-day returns, no restocking fee</span>',outcome:[55,20,25],caption:'Surfacing the return policy lowers perceived risk — fewer simulated shoppers leave, though some still hesitate on cleaning.'}
 };
 function setMode(m){
+  if(window.gtag)gtag('event','fork_scenario_select',{scenario:m});
   document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('active',b.dataset.mode===m));
   const s=SCENARIOS[m];
   document.getElementById('moduleContent').innerHTML=s.module;
@@ -41,5 +46,16 @@ function setMode(m){
 }
 document.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>setMode(b.dataset.mode)));
 setMode('baseline');
-document.getElementById('copyIntro').addEventListener('click',async()=>{const s='Hello Marketing Simulation Lab, I’m interested in exploring a design partnership to test consumer simulation for e-commerce decision-making.\n\nPlease reach out to rachel.qrd@gmail.com.';try{await navigator.clipboard.writeText(s);document.getElementById('copyStatus').textContent='Copied. You can paste this into your preferred email or message.'}catch(e){document.getElementById('copyStatus').textContent=s}})})();
+document.getElementById('copyIntro').addEventListener('click',async()=>{if(window.gtag)gtag('event','partnership_intro_copy');const s='Hello Marketing Simulation Lab, I’m interested in exploring a design partnership to test consumer simulation for e-commerce decision-making.\n\nPlease reach out to rachel.qrd@gmail.com.';try{await navigator.clipboard.writeText(s);document.getElementById('copyStatus').textContent='Copied. You can paste this into your preferred email or message.'}catch(e){document.getElementById('copyStatus').textContent=s}});
+// Generic CTA tracker: any link/button with an href starting with "#" (anchor nav) or
+// a known CTA class fires a GA4 event named after its visible label, so every button
+// on the page is covered without hand-wiring each one individually.
+document.querySelectorAll('a.solid, a.outline, a[href^="#"]').forEach(el=>{
+  el.addEventListener('click',()=>{
+    if(!window.gtag)return;
+    const label=el.textContent.trim().replace(/\s+/g,' ');
+    gtag('event','cta_click',{cta_label:label,cta_href:el.getAttribute('href')||''});
+  });
+});
+})();
 </script></body></html>
