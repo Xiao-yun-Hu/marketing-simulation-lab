@@ -31,13 +31,29 @@ gtag('js',new Date());gtag('config','G-589QHZSK1R');
     variant=Math.random()<0.5?'a':'b';
     isNewAssignment=true;
   }
+  const dest=(variant==='a'?'a/':'scanner/')+location.search;
+
   if(!override){
     try{ localStorage.setItem(KEY,variant); }catch(e){}
-    gtag('event','experiment_exposure',{experiment_variant:variant,is_new_assignment:isNewAssignment});
+    // location.replace() right after gtag() is too fast: the gtag.js script loads
+    // async, so on a brand-new page load it usually hasn't initialized yet, the
+    // event just sits in the dataLayer queue, and navigating away abandons that
+    // queue entirely — the hit is silently never sent. event_callback is Google's
+    // documented fix for "track an event, then navigate": gtag calls it once the
+    // hit is actually dispatched (or after event_timeout, whichever is first), so
+    // navigation only proceeds once delivery has had a real chance to happen.
+    let navigated=false;
+    const go=()=>{ if(navigated)return; navigated=true; location.replace(dest); };
+    gtag('event','experiment_exposure',{
+      experiment_variant:variant,
+      is_new_assignment:isNewAssignment,
+      event_callback:go,
+      event_timeout:800
+    });
+    setTimeout(go,900); // belt-and-suspenders in case gtag.js fails to load at all
+  }else{
+    location.replace(dest);
   }
-
-  const dest=(variant==='a'?'a/':'scanner/')+location.search;
-  location.replace(dest);
 })();
 </script>
 </head>
