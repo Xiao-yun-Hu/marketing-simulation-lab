@@ -7,11 +7,11 @@
       },
       {
         "visitor": 1,
-        "landed": "a"
+        "landed": "b"
       },
       {
         "visitor": 2,
-        "landed": "a"
+        "landed": "b"
       },
       {
         "visitor": 3,
@@ -19,7 +19,7 @@
       },
       {
         "visitor": 4,
-        "landed": "b"
+        "landed": "a"
       },
       {
         "visitor": 5,
@@ -31,43 +31,43 @@
       },
       {
         "visitor": 7,
-        "landed": "a"
+        "landed": "b"
       },
       {
         "visitor": 8,
-        "landed": "a"
+        "landed": "b"
       },
       {
         "visitor": 9,
-        "landed": "b"
-      },
-      {
-        "visitor": 10,
         "landed": "a"
       },
       {
-        "visitor": 11,
+        "visitor": 10,
         "landed": "b"
+      },
+      {
+        "visitor": 11,
+        "landed": "a"
       },
       {
         "visitor": 12,
-        "landed": "b"
+        "landed": "a"
       },
       {
         "visitor": 13,
-        "landed": "b"
+        "landed": "a"
       },
       {
         "visitor": 14,
-        "landed": "b"
+        "landed": "a"
       },
       {
         "visitor": 15,
-        "landed": "b"
+        "landed": "a"
       },
       {
         "visitor": 16,
-        "landed": "b"
+        "landed": "a"
       },
       {
         "visitor": 17,
@@ -75,11 +75,11 @@
       },
       {
         "visitor": 18,
-        "landed": "b"
+        "landed": "a"
       },
       {
         "visitor": 19,
-        "landed": "b"
+        "landed": "a"
       }
     ],
     "stickiness_failures": [],
@@ -175,7 +175,8 @@
           "page_view",
           "experiment_exposure",
           "scroll",
-          "page_view"
+          "page_view",
+          "scroll"
         ],
         "detail": [
           {
@@ -188,11 +189,15 @@
           },
           {
             "event": "scroll",
-            "status": "initiated"
+            "status": "failed:net::ERR_ABORTED"
           },
           {
             "event": "page_view",
             "status": "failed:net::ERR_ABORTED"
+          },
+          {
+            "event": "scroll",
+            "status": "initiated"
           },
           {
             "event": "?",
@@ -245,7 +250,8 @@
           "page_view",
           "experiment_exposure",
           "scroll",
-          "page_view"
+          "page_view",
+          "scroll"
         ],
         "detail": [
           {
@@ -258,15 +264,19 @@
           },
           {
             "event": "scroll",
-            "status": "initiated"
+            "status": "failed:net::ERR_ABORTED"
           },
           {
             "event": "page_view",
             "status": "failed:net::ERR_ABORTED"
           },
           {
-            "event": "?",
+            "event": "scroll",
             "status": "initiated"
+          },
+          {
+            "event": "?",
+            "status": "failed:net::ERR_ABORTED"
           },
           {
             "event": "page_view",
@@ -280,7 +290,8 @@
           "page_view",
           "experiment_exposure",
           "scroll",
-          "page_view"
+          "page_view",
+          "scroll"
         ],
         "detail": [
           {
@@ -293,15 +304,19 @@
           },
           {
             "event": "scroll",
-            "status": "initiated"
+            "status": "failed:net::ERR_ABORTED"
           },
           {
             "event": "page_view",
             "status": "failed:net::ERR_ABORTED"
           },
           {
-            "event": "?",
+            "event": "scroll",
             "status": "initiated"
+          },
+          {
+            "event": "?",
+            "status": "failed:net::ERR_ABORTED"
           },
           {
             "event": "page_view",
@@ -420,7 +435,8 @@
           "page_view",
           "experiment_exposure",
           "scroll",
-          "page_view"
+          "page_view",
+          "scroll"
         ],
         "detail": [
           {
@@ -433,11 +449,15 @@
           },
           {
             "event": "scroll",
-            "status": "initiated"
+            "status": "failed:net::ERR_ABORTED"
           },
           {
             "event": "page_view",
             "status": "failed:net::ERR_ABORTED"
+          },
+          {
+            "event": "scroll",
+            "status": "initiated"
           },
           {
             "event": "?",
@@ -464,7 +484,7 @@
           },
           {
             "event": "experiment_exposure",
-            "status": "initiated"
+            "status": "failed:net::ERR_ABORTED"
           },
           {
             "event": "scroll",
@@ -480,7 +500,7 @@
           },
           {
             "event": "page_view",
-            "status": "initiated"
+            "status": "failed:net::ERR_ABORTED"
           }
         ]
       },
@@ -586,10 +606,6 @@
           {
             "event": "page_view",
             "status": "initiated"
-          },
-          {
-            "event": "page_view",
-            "status": "initiated"
           }
         ]
       },
@@ -634,7 +650,8 @@
           "page_view",
           "experiment_exposure",
           "scroll",
-          "page_view"
+          "page_view",
+          "scroll"
         ],
         "detail": [
           {
@@ -647,15 +664,19 @@
           },
           {
             "event": "scroll",
-            "status": "initiated"
+            "status": "failed:net::ERR_ABORTED"
           },
           {
             "event": "page_view",
             "status": "failed:net::ERR_ABORTED"
           },
           {
-            "event": "?",
+            "event": "scroll",
             "status": "initiated"
+          },
+          {
+            "event": "?",
+            "status": "failed:net::ERR_ABORTED"
           },
           {
             "event": "page_view",
@@ -669,7 +690,8 @@
           "page_view",
           "experiment_exposure",
           "scroll",
-          "page_view"
+          "page_view",
+          "scroll"
         ],
         "detail": [
           {
@@ -682,15 +704,19 @@
           },
           {
             "event": "scroll",
-            "status": "initiated"
+            "status": "failed:net::ERR_ABORTED"
           },
           {
             "event": "page_view",
             "status": "failed:net::ERR_ABORTED"
           },
           {
-            "event": "?",
+            "event": "scroll",
             "status": "initiated"
+          },
+          {
+            "event": "?",
+            "status": "failed:net::ERR_ABORTED"
           },
           {
             "event": "page_view",
@@ -704,7 +730,8 @@
           "page_view",
           "experiment_exposure",
           "scroll",
-          "page_view"
+          "page_view",
+          "scroll"
         ],
         "detail": [
           {
@@ -717,11 +744,15 @@
           },
           {
             "event": "scroll",
-            "status": "initiated"
+            "status": "failed:net::ERR_ABORTED"
           },
           {
             "event": "page_view",
             "status": "failed:net::ERR_ABORTED"
+          },
+          {
+            "event": "scroll",
+            "status": "initiated"
           },
           {
             "event": "?",
@@ -807,8 +838,8 @@
   },
   "summary": {
     "n_visitors": 20,
-    "a_count": 8,
-    "b_count": 12,
+    "a_count": 13,
+    "b_count": 7,
     "exposure_beacon_fired_for_n_of_20": 20,
     "exposure_missing_detail": [],
     "stickiness_failures": [],
