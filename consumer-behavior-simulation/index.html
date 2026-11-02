@@ -67,7 +67,8 @@ p{color:#d5dad3;font-size:15.5px}
 .steps li::before{content:counter(step);position:absolute;left:18px;top:18px;color:var(--lime);font:13px 'Courier New',monospace;border:1px solid var(--lime);width:24px;height:24px;display:flex;align-items:center;justify-content:center}
 .steps h3{margin:0 0 6px}
 .steps p{margin:0;font-size:14px}
-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0}
+table{width:100%;min-width:560px;border-collapse:collapse;margin:0;font-size:14px}
 th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top}
 th{color:var(--lime);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
 ul,ol{color:#d5dad3;font-size:15px;padding-left:22px}
@@ -106,12 +107,12 @@ footer a:hover{color:var(--lime)}
 </ol>
 
 <h2>E-commerce use cases</h2>
-<table>
+<div class="table-wrap"><table>
 <tr><th>Use case</th><th>Question it answers</th><th>Status</th></tr>
 <tr><td>Landing &amp; product pages</td><td>What information is missing or unclear that's stopping the purchase?</td><td>Active — current focus</td></tr>
 <tr><td>Positioning &amp; offers</td><td>Which value proposition or offer framing changes how shoppers evaluate a product?</td><td>Active research direction</td></tr>
 <tr><td>Agent commerce</td><td>How do people and AI shopping agents clarify needs and compare trade-offs differently?</td><td>Roadmap direction, not yet commercially available</td></tr>
-</table>
+</table></div>
 
 <h2>What simulation is good at — and isn't</h2>
 <p>Simulation is good at generating and ranking many candidate hypotheses quickly, and at surfacing friction a team hadn't considered. It is not good at producing a number you should publish as a measured conversion lift, and it should not be the only evidence behind a final launch decision. See <a href="/marketing-simulation-lab/research/">the research page</a> for the specific internal and external evidence behind that distinction, including where simulated and real effect sizes have diverged.</p>

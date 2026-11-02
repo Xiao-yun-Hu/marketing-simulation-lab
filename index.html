@@ -89,7 +89,8 @@ section h2{font-size:clamp(24px,3vw,32px);font-weight:600;margin:0 0 10px}
 .cell .num{font:11px 'Courier New',monospace;color:var(--lime);letter-spacing:.1em}
 .cell h3{font-size:18px;margin:10px 0 8px;font-weight:600}
 .cell p{color:var(--muted);font-size:14px}
-table{width:100%;border-collapse:collapse;margin-top:24px;font-size:14px}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:24px}
+table{width:100%;min-width:560px;border-collapse:collapse;margin:0;font-size:14px}
 th,td{border:1px solid var(--line);padding:12px 14px;text-align:left;vertical-align:top}
 th{color:var(--lime);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
 .versions{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:30px}
@@ -179,11 +180,11 @@ footer a:hover{color:var(--lime)}
 <div class="section-label">[ Evidence, not magic ]</div>
 <h2>Simulation proposes. Reality decides.</h2>
 <p style="max-width:700px;color:#d5dad3">We care about whether simulated decisions match what real people do — not whether synthetic output merely sounds plausible. Two early research notes, reported with their caveats:</p>
-<table>
+<div class="table-wrap"><table>
 <tr><th>Research note</th><th>Result</th><th>Caveat</th></tr>
 <tr><td>Ad copy credibility (two-sided messaging)</td><td>Human survey +0.54 pts vs. simulation +0.30 pts on a 1–7 credibility scale</td><td>Direction aligned; effect sizes did not. Directional comparison only — raw responses and uncertainty were not provided in the source brief.</td></tr>
 <tr><td>Product information completeness</td><td>Simulated resolution of shopper questions rose 25–50 percentage points after clearer after-sales summaries</td><td>Internal simulation outcome, not a measured real-world conversion lift.</td></tr>
-</table>
+</table></div>
 <p style="margin-top:20px"><a class="btn" href="/marketing-simulation-lab/research/">Read the full research page →</a></p>
 </section>
 

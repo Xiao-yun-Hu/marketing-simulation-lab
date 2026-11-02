@@ -62,7 +62,8 @@ h2{font-size:24px;font-weight:600;margin:46px 0 14px}
 h3{font-size:17px;font-weight:600;margin:24px 0 8px}
 .answer{border-left:3px solid var(--lime);padding:4px 0 4px 20px;font-size:18px;color:#d5dad3;margin:0 0 30px}
 p{color:#d5dad3;font-size:15.5px}
-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:13.5px}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0}
+table{width:100%;min-width:560px;border-collapse:collapse;margin:0;font-size:13.5px}
 th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top}
 th{color:var(--lime);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
 ul,ol{color:#d5dad3;font-size:15px;padding-left:22px}
@@ -97,11 +98,11 @@ footer a:hover{color:var(--lime)}
 
 <h2>What we've measured internally</h2>
 <p>Two early internal research notes, reported with the caveats attached in the original write-up:</p>
-<table>
+<div class="table-wrap"><table>
 <tr><th>Note</th><th>Result</th><th>Caveat</th></tr>
 <tr><td>Ad copy credibility (two-sided messaging)</td><td>Human survey +0.54 pts vs. simulation +0.30 pts on a 1–7 credibility scale</td><td>Direction aligned; effect sizes did not. Directional comparison only — raw responses and uncertainty were not provided in the source brief.</td></tr>
 <tr><td>Product information completeness</td><td>Simulated resolution of shopper questions rose 25–50 percentage points after clearer after-sales summaries, across two product contexts</td><td>Internal simulation outcome, not a measured real-world conversion lift.</td></tr>
-</table>
+</table></div>
 <p class="tiny">Recorded 2026. Internal, not independently audited — treat as directional, not confirmatory.</p>
 
 <h2>What the published research says</h2>

@@ -62,7 +62,8 @@ h2{font-size:24px;font-weight:600;margin:46px 0 14px}
 h3{font-size:18px;font-weight:600;margin:28px 0 10px}
 .answer{border-left:3px solid var(--lime);padding:4px 0 4px 20px;font-size:18px;color:#d5dad3;margin:0 0 30px}
 p{color:#d5dad3;font-size:15.5px}
-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0}
+table{width:100%;min-width:560px;border-collapse:collapse;margin:0;font-size:14px}
 th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top}
 th{color:var(--lime);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
 ul,ol{color:#d5dad3;font-size:15px;padding-left:22px}
@@ -95,13 +96,13 @@ footer a:hover{color:var(--lime)}
 
 <h2>Synthetic consumers vs. personas vs. synthetic respondents vs. digital twins</h2>
 <p>These four terms get used interchangeably, but they describe different things:</p>
-<table>
+<div class="table-wrap"><table>
 <tr><th>Term</th><th>What it is</th><th>How it's built</th><th>Best use</th></tr>
 <tr><td>Marketing persona</td><td>A static, human-authored archetype ("budget-conscious parent, 35–44")</td><td>Written by a researcher or marketer from qualitative input</td><td>Team alignment, messaging direction</td></tr>
 <tr><td>Synthetic respondent</td><td>An LLM prompted to answer a survey instrument as if it were a member of a target population</td><td>Prompted or fine-tuned language model, often at scale</td><td>Early-stage survey piloting, question design</td></tr>
 <tr><td>Synthetic consumer (our usage)</td><td>A simulated shopper that interacts with an actual product page, offer or decision scenario, not just a survey question</td><td>Behaviorally-grounded simulation layered on an LLM population</td><td>Diagnosing friction in a specific page or flow before a real A/B test</td></tr>
 <tr><td>Digital twin</td><td>A model of one specific, identifiable real customer or account, updated from that person's real data</td><td>Built from an individual's real behavioral history</td><td>Personalization and account-level forecasting for an existing customer</td></tr>
-</table>
+</table></div>
 
 <h2>When synthetic consumer simulation applies</h2>
 <ul>
