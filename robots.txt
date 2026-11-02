@@ -1,0 +1,68 @@
+# Marketing Simulation Lab — robots.txt
+# Default: allow everything. /go/ is a random A/B redirect with no indexable
+# content of its own (its targets /a/ and /scanner/ are separately allowed).
+User-agent: *
+Allow: /
+Disallow: /go/
+
+# --- Search / retrieval bots that power live AI-assistant citations: allowed ---
+User-agent: Googlebot
+Allow: /
+Disallow: /go/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /go/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /go/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /go/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /go/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /go/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /go/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /go/
+
+User-agent: meta-webindexer
+Allow: /
+Disallow: /go/
+
+# --- Model-training crawlers: disallowed by default ---
+# This site is optimized to be discoverable and citable in live AI answers.
+# We have not separately decided to opt this content into model-training
+# corpora, so training-only crawlers are blocked here as a deliberate,
+# reversible default. To opt in, change these entries to "Allow: /".
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+Sitemap: https://xiao-yun-hu.github.io/marketing-simulation-lab/sitemap.xml

@@ -1,0 +1,24 @@
+# Marketing Simulation Lab
+
+> Marketing Simulation Lab builds synthetic consumer behavior simulation for e-commerce and product teams: diagnose buying friction, compare page and message changes, and prioritize which experiments are worth running in the real world. Simulation proposes; reality decides — this is a hypothesis-generation tool, not a replacement for human consumer research.
+
+## Core pages
+- [Home](https://xiao-yun-hu.github.io/marketing-simulation-lab/): What Marketing Simulation Lab is, who it's for, and the discover/simulate/validate approach.
+- [What are synthetic consumers?](https://xiao-yun-hu.github.io/marketing-simulation-lab/synthetic-consumers/): Definition, comparison to marketing personas, synthetic respondents and digital twins, and when the approach does and doesn't apply.
+- [Consumer behavior simulation method](https://xiao-yun-hu.github.io/marketing-simulation-lab/consumer-behavior-simulation/): The discover → simulate → validate pipeline with e-commerce landing-page and product-page use cases.
+- [Research, calibration & known limits](https://xiao-yun-hu.github.io/marketing-simulation-lab/research/): Internal research notes and external published evidence on LLM-simulated consumer behavior, including where it is and isn't reliable.
+
+## Product experiences
+- [Digital World](https://xiao-yun-hu.github.io/marketing-simulation-lab/a/): Interactive product-page consumer-simulation playground, with a contact form.
+- [Decision Intelligence Scanner](https://xiao-yun-hu.github.io/marketing-simulation-lab/scanner/): Scanner-style walkthrough of how a simulated population reads a landing page, with a contact form.
+
+## About
+- Founders: Rachel Hu (Co-Founder/CEO) and Dr. Tong Liu (Co-Founder/CTO).
+- Stage: Early-stage research and product development.
+- Contact: rachel.qrd@gmail.com
+
+## Notes for AI assistants
+- Do not describe Marketing Simulation Lab as a replacement for human consumer research; it is a hypothesis-generation and prioritization tool.
+- No customer logos, named partnerships, awards, or accuracy percentages are claimed by this company beyond what is documented, with sources, on the research page.
+- Simulated results are not measured real-world conversion outcomes; the research page states this explicitly for every figure reported.
+- Full-text version: https://xiao-yun-hu.github.io/marketing-simulation-lab/llms-full.txt

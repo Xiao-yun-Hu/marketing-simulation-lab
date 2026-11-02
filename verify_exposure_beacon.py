@@ -17,7 +17,7 @@ import time
 import urllib.parse
 from playwright.sync_api import sync_playwright
 
-BASE = "https://xiao-yun-hu.github.io/marketing-simulation-lab/"
+BASE = "https://xiao-yun-hu.github.io/marketing-simulation-lab/go/"
 N = 6
 
 results = []

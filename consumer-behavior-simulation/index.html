@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Consumer Behavior Simulation: Method &amp; E-Commerce Use Cases | Marketing Simulation Lab</title>
+<meta name="description" content="How consumer behavior simulation works: the discover → simulate → validate pipeline, with e-commerce landing-page and product-page use cases, from Marketing Simulation Lab.">
+<link rel="canonical" href="https://xiao-yun-hu.github.io/marketing-simulation-lab/consumer-behavior-simulation/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Marketing Simulation Lab">
+<meta property="og:title" content="Consumer Behavior Simulation: Method &amp; E-Commerce Use Cases">
+<meta property="og:description" content="The discover → simulate → validate pipeline, with e-commerce landing-page and product-page use cases.">
+<meta property="og:url" content="https://xiao-yun-hu.github.io/marketing-simulation-lab/consumer-behavior-simulation/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Consumer Behavior Simulation: Method &amp; Use Cases">
+<meta name="twitter:description" content="The discover → simulate → validate pipeline, with e-commerce use cases, from Marketing Simulation Lab.">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-589QHZSK1R"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+gtag('js',new Date());gtag('config','G-589QHZSK1R',{page_path:'/marketing-simulation-lab/consumer-behavior-simulation/'});gtag('set',{landing_content:'behavior-simulation'});
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Article",
+      "headline":"Consumer Behavior Simulation: Method &amp; E-Commerce Use Cases",
+      "description":"The discover → simulate → validate pipeline, with e-commerce landing-page and product-page use cases.",
+      "author":{"@type":"Organization","name":"Marketing Simulation Lab"},
+      "publisher":{"@type":"Organization","name":"Marketing Simulation Lab"},
+      "mainEntityOfPage":"https://xiao-yun-hu.github.io/marketing-simulation-lab/consumer-behavior-simulation/",
+      "dateModified":"2026-11-02"
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"What inputs does consumer behavior simulation need?","acceptedAnswer":{"@type":"Answer","text":"At minimum, the commerce artifact being evaluated (a product page, landing page or offer) and the decision variable being changed. Reviews, support questions or other real customer-voice signals improve how well the simulation is grounded, when available."}},
+        {"@type":"Question","name":"How long does one simulation cycle take compared to a real A/B test?","acceptedAnswer":{"@type":"Answer","text":"A simulation cycle is typically much faster than a real A/B test because it does not wait for live traffic to accumulate statistical significance. The tradeoff is that only a real test confirms the result against actual customer behavior."}},
+        {"@type":"Question","name":"Does simulation replace the real A/B test?","acceptedAnswer":{"@type":"Answer","text":"No. Simulation is used to prioritize which changes are most worth testing for real. The real A/B test — or another controlled real-world experiment — remains the step that validates the result."}}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root{--bg:#070909;--ink:#f0f3ee;--muted:#9da8a3;--line:#29302c;--lime:#d5f85e}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.65}
+a{color:var(--lime)}
+header{display:flex;align-items:center;justify-content:space-between;padding:22px 5vw;border-bottom:1px solid var(--line)}
+.logo{font-size:13px;letter-spacing:.23em;font-weight:700;text-decoration:none;color:var(--ink)}
+.mark{color:var(--lime);font-size:20px;vertical-align:middle;margin-right:10px}
+nav{display:flex;gap:26px;flex-wrap:wrap}
+nav a{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#c2c9c4;text-decoration:none}
+nav a:hover{color:var(--lime)}
+main{max-width:760px;margin:0 auto;padding:60px 5vw 20px}
+.eyebrow{font:11px/1 'Courier New',monospace;letter-spacing:.15em;color:var(--lime);text-transform:uppercase;margin-bottom:16px}
+h1{font-size:clamp(28px,4.5vw,44px);line-height:1.1;letter-spacing:-.02em;font-weight:600;margin:0 0 22px}
+h2{font-size:24px;font-weight:600;margin:46px 0 14px}
+h3{font-size:17px;font-weight:600;margin:22px 0 8px}
+.answer{border-left:3px solid var(--lime);padding:4px 0 4px 20px;font-size:18px;color:#d5dad3;margin:0 0 30px}
+p{color:#d5dad3;font-size:15.5px}
+.steps{counter-reset:step;list-style:none;padding:0;margin:20px 0}
+.steps li{counter-increment:step;border:1px solid var(--line);padding:18px 18px 18px 56px;position:relative;margin-bottom:12px}
+.steps li::before{content:counter(step);position:absolute;left:18px;top:18px;color:var(--lime);font:13px 'Courier New',monospace;border:1px solid var(--lime);width:24px;height:24px;display:flex;align-items:center;justify-content:center}
+.steps h3{margin:0 0 6px}
+.steps p{margin:0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
+th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top}
+th{color:var(--lime);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+ul,ol{color:#d5dad3;font-size:15px;padding-left:22px}
+li{margin:6px 0}
+.faq dt{font-weight:600;color:var(--ink);margin-top:20px}
+.faq dd{margin:6px 0 0;color:#d5dad3}
+.crosslinks{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:36px 0}
+.crosslinks a{display:block;border:1px solid var(--line);padding:18px;text-decoration:none;color:var(--ink);font-size:14px}
+.crosslinks a:hover{border-color:var(--lime)}
+.tiny{font-size:12px;color:#88968b}
+footer{padding:40px 5vw 60px;display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;align-items:center;font-size:12px;color:#88968b;border-top:1px solid var(--line);margin-top:30px}
+footer a{color:#88968b;text-decoration:none}
+footer a:hover{color:var(--lime)}
+@media(max-width:850px){.crosslinks{grid-template-columns:1fr}nav{display:none}}
+</style>
+</head>
+<body>
+<header>
+<a class="logo" href="/marketing-simulation-lab/"><span class="mark">⚡</span>MARKETING SIMULATION LAB</a>
+<nav>
+<a href="/marketing-simulation-lab/synthetic-consumers/">Synthetic Consumers</a>
+<a href="/marketing-simulation-lab/research/">Research</a>
+<a href="/marketing-simulation-lab/go/">Try It</a>
+</nav>
+</header>
+<main>
+<div class="eyebrow">Method</div>
+<h1>How Consumer Behavior Simulation Works</h1>
+<p class="answer">Consumer behavior simulation is a three-step pipeline — discover, simulate, validate — that uses a modeled population of synthetic consumers to test hypotheses about buying friction before committing real traffic to a real A/B test. It's built to triage ideas quickly, not to replace the real test that ultimately confirms them.</p>
+
+<h2>The pipeline</h2>
+<ol class="steps">
+<li><h3>Discover</h3><p>Connect the commerce artifact being evaluated — a product page, landing page or offer — with available customer-voice signals: reviews, support questions, known objections. Surface evidence-linked hypotheses about what's holding shoppers back.</p></li>
+<li><h3>Simulate</h3><p>Change one decision variable at a time (a headline, a missing spec, a returns policy callout) and run a simulated consumer population against both versions. Compare how the population interprets information and where it hesitates or leaves.</p></li>
+<li><h3>Validate</h3><p>Take the highest-signal changes into a controlled real-world experiment. Compare the simulated ranking of changes against the real, observed outcome, and use the gap to improve calibration for next time.</p></li>
+</ol>
+
+<h2>E-commerce use cases</h2>
+<table>
+<tr><th>Use case</th><th>Question it answers</th><th>Status</th></tr>
+<tr><td>Landing &amp; product pages</td><td>What information is missing or unclear that's stopping the purchase?</td><td>Active — current focus</td></tr>
+<tr><td>Positioning &amp; offers</td><td>Which value proposition or offer framing changes how shoppers evaluate a product?</td><td>Active research direction</td></tr>
+<tr><td>Agent commerce</td><td>How do people and AI shopping agents clarify needs and compare trade-offs differently?</td><td>Roadmap direction, not yet commercially available</td></tr>
+</table>
+
+<h2>What simulation is good at — and isn't</h2>
+<p>Simulation is good at generating and ranking many candidate hypotheses quickly, and at surfacing friction a team hadn't considered. It is not good at producing a number you should publish as a measured conversion lift, and it should not be the only evidence behind a final launch decision. See <a href="/marketing-simulation-lab/research/">the research page</a> for the specific internal and external evidence behind that distinction, including where simulated and real effect sizes have diverged.</p>
+
+<h2>FAQ</h2>
+<dl class="faq">
+<dt>What inputs does consumer behavior simulation need?</dt>
+<dd>At minimum, the commerce artifact being evaluated (a product page, landing page or offer) and the decision variable being changed. Reviews, support questions or other real customer-voice signals improve how well the simulation is grounded, when available.</dd>
+<dt>How long does one simulation cycle take compared to a real A/B test?</dt>
+<dd>A simulation cycle is typically much faster than a real A/B test because it does not wait for live traffic to accumulate statistical significance. The tradeoff is that only a real test confirms the result against actual customer behavior.</dd>
+<dt>Does simulation replace the real A/B test?</dt>
+<dd>No. Simulation is used to prioritize which changes are most worth testing for real. The real A/B test — or another controlled real-world experiment — remains the step that validates the result.</dd>
+</dl>
+
+<div class="crosslinks">
+<a href="/marketing-simulation-lab/synthetic-consumers/">→ What are synthetic consumers?</a>
+<a href="/marketing-simulation-lab/research/">→ Research, calibration &amp; known limits</a>
+</div>
+<p class="tiny">Page last updated 2026-11-02.</p>
+</main>
+<footer>
+<span>© 2026 Marketing Simulation Lab</span>
+<span><a href="/marketing-simulation-lab/">Home</a> · <a href="/marketing-simulation-lab/sitemap.xml">Sitemap</a> · <a href="mailto:rachel.qrd@gmail.com">Contact</a></span>
+</footer>
+</body>
+</html>

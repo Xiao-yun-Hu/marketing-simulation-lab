@@ -1,0 +1,27 @@
+{
+  "name": "Marketing Simulation Lab",
+  "url": "https://xiao-yun-hu.github.io/marketing-simulation-lab/",
+  "description": "Synthetic consumer behavior simulation for e-commerce and product teams: diagnose buying friction, compare page and message changes, and prioritize real-world experiments.",
+  "sitemap": "https://xiao-yun-hu.github.io/marketing-simulation-lab/sitemap.xml",
+  "robots_txt": "https://xiao-yun-hu.github.io/marketing-simulation-lab/robots.txt",
+  "llms_txt": "https://xiao-yun-hu.github.io/marketing-simulation-lab/llms.txt",
+  "llms_full_txt": "https://xiao-yun-hu.github.io/marketing-simulation-lab/llms-full.txt",
+  "topic_pages": [
+    {"title": "What are synthetic consumers?", "url": "https://xiao-yun-hu.github.io/marketing-simulation-lab/synthetic-consumers/"},
+    {"title": "Consumer behavior simulation method", "url": "https://xiao-yun-hu.github.io/marketing-simulation-lab/consumer-behavior-simulation/"},
+    {"title": "Research, calibration & known limits", "url": "https://xiao-yun-hu.github.io/marketing-simulation-lab/research/"}
+  ],
+  "product_experiences": [
+    {"title": "Digital World", "url": "https://xiao-yun-hu.github.io/marketing-simulation-lab/a/"},
+    {"title": "Decision Intelligence Scanner", "url": "https://xiao-yun-hu.github.io/marketing-simulation-lab/scanner/"}
+  ],
+  "contact": {
+    "type": "email",
+    "value": "rachel.qrd@gmail.com"
+  },
+  "organization": {
+    "founders": ["Rachel Hu", "Dr. Tong Liu"],
+    "stage": "Early-stage research and product development"
+  },
+  "last_updated": "2026-11-02"
+}

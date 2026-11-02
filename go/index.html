@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Marketing Simulation Lab</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-589QHZSK1R"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+gtag('js',new Date());gtag('config','G-589QHZSK1R');
+
+// A/B entry point: assigns each visitor to variant A (digital world) or variant B
+// (decision scanner) on first visit, remembers the choice in localStorage so repeat
+// visits stay on the same version, and redirects there. Both variants also remain
+// directly reachable at /a/ and /scanner/ for manual link-sharing or for checking a
+// specific version yourself — visiting either of those URLs directly never goes
+// through this assignment logic, so that traffic doesn't skew the experiment.
+(function(){
+  const KEY='msl_experiment_variant';
+  const params=new URLSearchParams(location.search);
+  const override=params.get('v'); // ?v=a or ?v=b — manual/dev preview, not counted as a real exposure
+  let variant=override;
+  let isNewAssignment=false;
+
+  if(!variant){
+    try{ variant=localStorage.getItem(KEY); }catch(e){}
+  }
+  if(variant!=='a'&&variant!=='b'){
+    variant=Math.random()<0.5?'a':'b';
+    isNewAssignment=true;
+  }
+  const dest=(variant==='a'?'../a/':'../scanner/')+location.search;
+
+  if(!override){
+    try{ localStorage.setItem(KEY,variant); }catch(e){}
+  }
+
+  // Only a genuine first-time assignment counts as an "exposure" — a returning
+  // sticky visitor re-opening the bare entry link (not /a/ or /scanner/ directly)
+  // must redirect immediately with NO event, otherwise every repeat visit to the
+  // entry URL would log another experiment_exposure and pollute the real count.
+  if(!override&&isNewAssignment){
+    // location.replace() right after gtag() is too fast: the gtag.js script loads
+    // async, so on a brand-new page load it usually hasn't initialized yet, the
+    // event just sits in the dataLayer queue, and navigating away abandons that
+    // queue entirely — the hit is silently never sent. event_callback is Google's
+    // documented fix for "track an event, then navigate": gtag calls it once the
+    // hit is actually dispatched (or after event_timeout, whichever is first), so
+    // navigation only proceeds once delivery has had a real chance to happen.
+    let navigated=false;
+    const go=()=>{ if(navigated)return; navigated=true; location.replace(dest); };
+    gtag('event','experiment_exposure',{
+      experiment_variant:variant,
+      event_callback:go,
+      event_timeout:800
+    });
+    setTimeout(go,900); // belt-and-suspenders in case gtag.js fails to load at all
+  }else{
+    location.replace(dest);
+  }
+})();
+</script>
+</head>
+<body></body>
+</html>

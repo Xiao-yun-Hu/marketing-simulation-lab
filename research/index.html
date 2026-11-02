@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Research, Calibration &amp; Known Limits of Consumer Behavior Simulation | Marketing Simulation Lab</title>
+<meta name="description" content="What Marketing Simulation Lab has measured so far on LLM-simulated consumer behavior, how we calibrate against real responses, what the published literature says, and where simulation output should not be trusted alone.">
+<link rel="canonical" href="https://xiao-yun-hu.github.io/marketing-simulation-lab/research/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Marketing Simulation Lab">
+<meta property="og:title" content="Research, Calibration &amp; Known Limits of Consumer Behavior Simulation">
+<meta property="og:description" content="What we've measured so far, how we calibrate against real responses, and where simulation output should not be trusted alone.">
+<meta property="og:url" content="https://xiao-yun-hu.github.io/marketing-simulation-lab/research/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Research &amp; Known Limits of Consumer Behavior Simulation">
+<meta name="twitter:description" content="What we've measured, how we calibrate, and where simulation output should not be trusted alone — from Marketing Simulation Lab.">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-589QHZSK1R"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+gtag('js',new Date());gtag('config','G-589QHZSK1R',{page_path:'/marketing-simulation-lab/research/'});gtag('set',{landing_content:'research'});
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Article",
+      "headline":"Research, Calibration &amp; Known Limits of Consumer Behavior Simulation",
+      "description":"What Marketing Simulation Lab has measured so far, how we calibrate against real responses, and where simulation output should not be trusted alone.",
+      "author":{"@type":"Organization","name":"Marketing Simulation Lab"},
+      "publisher":{"@type":"Organization","name":"Marketing Simulation Lab"},
+      "mainEntityOfPage":"https://xiao-yun-hu.github.io/marketing-simulation-lab/research/",
+      "dateModified":"2026-11-02"
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Is simulated consumer behavior as reliable as a real A/B test?","acceptedAnswer":{"@type":"Answer","text":"No. In our own internal notes, direction has aligned with real human responses more often than effect size has. Published research shows LLM-simulated responses track real populations better in aggregate than at the individual level, and can systematically misrepresent some demographic groups. Treat simulation as a prioritization tool, not a substitute for a real test."}},
+        {"@type":"Question","name":"Does Marketing Simulation Lab guarantee visibility in AI search answers?","acceptedAnswer":{"@type":"Answer","text":"No. We follow Generative Engine Optimization practices described in the GEO research (Aggarwal et al., KDD 2024) — structuring content for citability — but no page structure, schema or llms.txt file can guarantee ranking, citation or recommendation by any AI system."}},
+        {"@type":"Question","name":"What are the known limitations of LLM-simulated consumers?","acceptedAnswer":{"@type":"Answer","text":"Published research has found LLM-generated opinions can misalign with real demographic groups' views, that simulated responses track real populations better at the aggregate level than the individual level, and that simulated effect sizes can differ from real human effect sizes even when direction matches."}}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root{--bg:#070909;--ink:#f0f3ee;--muted:#9da8a3;--line:#29302c;--lime:#d5f85e}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.65}
+a{color:var(--lime)}
+header{display:flex;align-items:center;justify-content:space-between;padding:22px 5vw;border-bottom:1px solid var(--line)}
+.logo{font-size:13px;letter-spacing:.23em;font-weight:700;text-decoration:none;color:var(--ink)}
+.mark{color:var(--lime);font-size:20px;vertical-align:middle;margin-right:10px}
+nav{display:flex;gap:26px;flex-wrap:wrap}
+nav a{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#c2c9c4;text-decoration:none}
+nav a:hover{color:var(--lime)}
+main{max-width:760px;margin:0 auto;padding:60px 5vw 20px}
+.eyebrow{font:11px/1 'Courier New',monospace;letter-spacing:.15em;color:var(--lime);text-transform:uppercase;margin-bottom:16px}
+h1{font-size:clamp(28px,4.5vw,44px);line-height:1.1;letter-spacing:-.02em;font-weight:600;margin:0 0 22px}
+h2{font-size:24px;font-weight:600;margin:46px 0 14px}
+h3{font-size:17px;font-weight:600;margin:24px 0 8px}
+.answer{border-left:3px solid var(--lime);padding:4px 0 4px 20px;font-size:18px;color:#d5dad3;margin:0 0 30px}
+p{color:#d5dad3;font-size:15.5px}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:13.5px}
+th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top}
+th{color:var(--lime);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+ul,ol{color:#d5dad3;font-size:15px;padding-left:22px}
+li{margin:7px 0}
+.faq dt{font-weight:600;color:var(--ink);margin-top:20px}
+.faq dd{margin:6px 0 0;color:#d5dad3}
+.cite{font-size:13px;color:var(--muted);margin:4px 0 16px}
+.cite a{color:#9fb5e8}
+.crosslinks{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:36px 0}
+.crosslinks a{display:block;border:1px solid var(--line);padding:18px;text-decoration:none;color:var(--ink);font-size:14px}
+.crosslinks a:hover{border-color:var(--lime)}
+.tiny{font-size:12px;color:#88968b}
+footer{padding:40px 5vw 60px;display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;align-items:center;font-size:12px;color:#88968b;border-top:1px solid var(--line);margin-top:30px}
+footer a{color:#88968b;text-decoration:none}
+footer a:hover{color:var(--lime)}
+@media(max-width:850px){.crosslinks{grid-template-columns:1fr}nav{display:none}}
+</style>
+</head>
+<body>
+<header>
+<a class="logo" href="/marketing-simulation-lab/"><span class="mark">⚡</span>MARKETING SIMULATION LAB</a>
+<nav>
+<a href="/marketing-simulation-lab/synthetic-consumers/">Synthetic Consumers</a>
+<a href="/marketing-simulation-lab/consumer-behavior-simulation/">Simulation Method</a>
+<a href="/marketing-simulation-lab/go/">Try It</a>
+</nav>
+</header>
+<main>
+<div class="eyebrow">Research &amp; Evidence</div>
+<h1>Research, Calibration &amp; Known Limits</h1>
+<p class="answer">Simulation proposes; reality decides. This page is an honest account of what we've measured internally, what the external published research says about LLM-simulated consumer behavior, and specifically where that evidence says simulation output should not be trusted on its own. Every number here is time-stamped, sourced and scoped — none are reported as measured real-world conversion results.</p>
+
+<h2>What we've measured internally</h2>
+<p>Two early internal research notes, reported with the caveats attached in the original write-up:</p>
+<table>
+<tr><th>Note</th><th>Result</th><th>Caveat</th></tr>
+<tr><td>Ad copy credibility (two-sided messaging)</td><td>Human survey +0.54 pts vs. simulation +0.30 pts on a 1–7 credibility scale</td><td>Direction aligned; effect sizes did not. Directional comparison only — raw responses and uncertainty were not provided in the source brief.</td></tr>
+<tr><td>Product information completeness</td><td>Simulated resolution of shopper questions rose 25–50 percentage points after clearer after-sales summaries, across two product contexts</td><td>Internal simulation outcome, not a measured real-world conversion lift.</td></tr>
+</table>
+<p class="tiny">Recorded 2026. Internal, not independently audited — treat as directional, not confirmatory.</p>
+
+<h2>What the published research says</h2>
+<h3>Calibration against real respondents</h3>
+<p>Kaiser, Kaiser, Schallner, Manewitsch &amp; Rau compared GPT-4o "digital twin" responses to real, quota-matched consumers on soft-drink preference questions. Synthetic responses tracked real ones reasonably well at the aggregate/trend level, but were measurably weaker at predicting any one individual's response.</p>
+<p class="cite">Kaiser et al., "Leaving Insight to Digital Twins? Promise, Progress and Limits of Synthetic Respondents," <em>NIM Marketing Intelligence Review</em> 18(1), 2026. <a href="https://nim.org/en/publications/detail/leaving-insight-to-digital-twins" rel="nofollow noopener">nim.org</a></p>
+
+<h3>Algorithmic fidelity — and its limits</h3>
+<p>Argyle et al. showed that an LLM conditioned on real respondents' sociodemographic backstories could reproduce fine-grained, demographically-correlated response patterns — what they called "algorithmic fidelity." The same paper is explicit that this comes with "not one bias, but many," not a clean substitute for human samples.</p>
+<p class="cite">Argyle et al., "Out of One, Many: Using Language Models to Simulate Human Samples," <em>Political Analysis</em> 31(3), 2023. <a href="https://arxiv.org/abs/2209.06899" rel="nofollow noopener">arXiv:2209.06899</a></p>
+
+<h3>Demographic misalignment</h3>
+<p>Santurkar et al. built OpinionsQA and found substantial misalignment between language-model-reflected opinions and real opinions across roughly 60 US demographic groups — in some cases comparable in size to the gap between Democrats and Republicans on climate change — and the misalignment persisted even after prompting the model to adopt a group's perspective. Older, widowed and highly religious respondents were consistently underrepresented well.</p>
+<p class="cite">Santurkar et al., "Whose Opinions Do Language Models Reflect?" ICML 2023 (PMLR 202). <a href="https://arxiv.org/abs/2303.17548" rel="nofollow noopener">arXiv:2303.17548</a></p>
+
+<h3>Simulated social behavior</h3>
+<p>Park et al.'s Generative Agents work showed LLM agents with observation, planning and reflection can produce believable simulated social behavior in a sandbox environment — useful as an architectural reference for how we structure simulated decision-making, though it is a systems paper, not a market-research validation study.</p>
+<p class="cite">Park et al., "Generative Agents: Interactive Simulacra of Human Behavior," UIST 2023. <a href="https://arxiv.org/abs/2304.03442" rel="nofollow noopener">arXiv:2304.03442</a></p>
+
+<h2>On discoverability: why this page is structured this way</h2>
+<p>We structure our content for citability by AI assistants and search systems, following the Generative Engine Optimization (GEO) research from Aggarwal et al. That paper proposes metrics for how visible a source is <em>inside</em> generated answers — not a search-ranking position — and found that adding citations and quotations could meaningfully increase that visibility in their benchmark, with results varying by domain. We apply the same discipline here (clear structure, sourced claims, machine-readable metadata) because it is good practice for any reader, human or model — not because it guarantees any outcome.</p>
+<p class="cite">Aggarwal et al., "GEO: Generative Engine Optimization," KDD 2024. <a href="https://arxiv.org/abs/2311.09735" rel="nofollow noopener">arXiv:2311.09735</a></p>
+
+<h2>Where we tell teams not to trust simulation alone</h2>
+<ul>
+<li>Final launch or budget decisions — validate with a real experiment first</li>
+<li>Small, niche or culturally specific populations the underlying model may represent poorly</li>
+<li>Any claim you plan to publish externally as a measured result — simulated outputs should always be labeled as simulated</li>
+</ul>
+
+<h2>FAQ</h2>
+<dl class="faq">
+<dt>Is simulated consumer behavior as reliable as a real A/B test?</dt>
+<dd>No. In our own internal notes, direction has aligned with real human responses more often than effect size has. Published research shows LLM-simulated responses track real populations better in aggregate than at the individual level, and can systematically misrepresent some demographic groups. Treat simulation as a prioritization tool, not a substitute for a real test.</dd>
+<dt>Does Marketing Simulation Lab guarantee visibility in AI search answers?</dt>
+<dd>No. We follow Generative Engine Optimization practices described in the GEO research (Aggarwal et al., KDD 2024) — structuring content for citability — but no page structure, schema or llms.txt file can guarantee ranking, citation or recommendation by any AI system.</dd>
+<dt>What are the known limitations of LLM-simulated consumers?</dt>
+<dd>Published research has found LLM-generated opinions can misalign with real demographic groups' views, that simulated responses track real populations better at the aggregate level than the individual level, and that simulated effect sizes can differ from real human effect sizes even when direction matches.</dd>
+</dl>
+
+<div class="crosslinks">
+<a href="/marketing-simulation-lab/synthetic-consumers/">→ What are synthetic consumers?</a>
+<a href="/marketing-simulation-lab/consumer-behavior-simulation/">→ How the simulation method works</a>
+</div>
+<p class="tiny">Page last updated 2026-11-02. External links are provided for reference and are not endorsements by the cited authors or venues of Marketing Simulation Lab.</p>
+</main>
+<footer>
+<span>© 2026 Marketing Simulation Lab</span>
+<span><a href="/marketing-simulation-lab/">Home</a> · <a href="/marketing-simulation-lab/sitemap.xml">Sitemap</a> · <a href="mailto:rachel.qrd@gmail.com">Contact</a></span>
+</footer>
+</body>
+</html>

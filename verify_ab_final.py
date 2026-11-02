@@ -8,7 +8,8 @@ import time
 import urllib.parse
 from playwright.sync_api import sync_playwright
 
-BASE = "https://xiao-yun-hu.github.io/marketing-simulation-lab/"
+BASE = "https://xiao-yun-hu.github.io/marketing-simulation-lab/go/"
+SITE_ROOT = "https://xiao-yun-hu.github.io/marketing-simulation-lab/"
 N_VISITORS = 20
 
 def landed_variant(url: str) -> str:
@@ -107,10 +108,10 @@ with sync_playwright() as p:
         errs = []
         statuses = []
         page.on("console", lambda m: errs.append(m.text) if m.type == "error" else None)
-        resp = page.goto(BASE + path, wait_until="networkidle", timeout=20000)
+        resp = page.goto(SITE_ROOT + path, wait_until="networkidle", timeout=20000)
         time.sleep(0.3)
         final_url = page.url.split("?")[0]
-        expected = BASE + path
+        expected = SITE_ROOT + path
         if final_url != expected:
             results["direct_visit_failures"].append({"path": path, "expected": expected, "got": final_url})
         if resp and resp.status >= 400:
