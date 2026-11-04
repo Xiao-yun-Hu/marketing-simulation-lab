@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Marketing Simulation Lab — Synthetic Consumer Behavior Simulation</title>
+<meta name="description" content="Marketing Simulation Lab builds synthetic consumer behavior simulation for e-commerce teams: diagnose buying friction, compare page and message changes, and prioritize what to test in the real world.">
+<link rel="canonical" href="https://xiao-yun-hu.github.io/marketing-simulation-lab/overview/">
+<link rel="sitemap" type="application/xml" href="https://xiao-yun-hu.github.io/marketing-simulation-lab/sitemap.xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Marketing Simulation Lab">
+<meta property="og:title" content="Marketing Simulation Lab — Synthetic Consumer Behavior Simulation">
+<meta property="og:description" content="Consumer simulation for e-commerce teams: diagnose buying friction, compare page and message changes, prioritize real-world tests. Simulation proposes; reality decides.">
+<meta property="og:url" content="https://xiao-yun-hu.github.io/marketing-simulation-lab/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Marketing Simulation Lab — Synthetic Consumer Behavior Simulation">
+<meta name="twitter:description" content="Consumer simulation for e-commerce teams: diagnose buying friction, compare page and message changes, prioritize real-world tests.">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-589QHZSK1R"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+gtag('js',new Date());gtag('config','G-589QHZSK1R',{page_path:'/marketing-simulation-lab/'});gtag('set',{landing_content:'home'});
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Organization",
+      "@id":"https://xiao-yun-hu.github.io/marketing-simulation-lab/#org",
+      "name":"Marketing Simulation Lab",
+      "url":"https://xiao-yun-hu.github.io/marketing-simulation-lab/",
+      "description":"Marketing Simulation Lab builds consumer behavior simulation tools that help commerce teams diagnose buying friction, explore alternatives and prioritize real-world experiments.",
+      "founder":[
+        {"@type":"Person","name":"Rachel Hu","jobTitle":"Co-Founder / CEO"},
+        {"@type":"Person","name":"Dr. Tong Liu","jobTitle":"Co-Founder / CTO"}
+      ],
+      "email":"rachel.qrd@gmail.com",
+      "contactPoint":{"@type":"ContactPoint","email":"rachel.qrd@gmail.com","contactType":"business inquiries"}
+    },
+    {
+      "@type":"WebSite",
+      "@id":"https://xiao-yun-hu.github.io/marketing-simulation-lab/#website",
+      "url":"https://xiao-yun-hu.github.io/marketing-simulation-lab/",
+      "name":"Marketing Simulation Lab",
+      "publisher":{"@id":"https://xiao-yun-hu.github.io/marketing-simulation-lab/#org"}
+    },
+    {
+      "@type":"Service",
+      "serviceType":"Synthetic consumer behavior simulation research",
+      "provider":{"@id":"https://xiao-yun-hu.github.io/marketing-simulation-lab/#org"},
+      "areaServed":"Global",
+      "audience":{"@type":"Audience","audienceType":"E-commerce and product teams"},
+      "description":"Consumer simulation for diagnosing buying friction, comparing page and message changes, and prioritizing real-world commerce experiments."
+    }
+  ]
+}
+</script>
+<style>
+:root{--bg:#070909;--ink:#f0f3ee;--muted:#9da8a3;--line:#29302c;--lime:#d5f85e}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+a{color:inherit}
+header{display:flex;align-items:center;justify-content:space-between;padding:22px 5vw;border-bottom:1px solid var(--line)}
+.logo{font-size:13px;letter-spacing:.23em;font-weight:700;text-decoration:none}
+.mark{color:var(--lime);font-size:20px;vertical-align:middle;margin-right:10px}
+nav{display:flex;gap:26px;flex-wrap:wrap}
+nav a{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#c2c9c4;text-decoration:none}
+nav a:hover{color:var(--lime)}
+main{max-width:980px;margin:0 auto;padding:0 5vw}
+.hero{padding:70px 0 40px;border-bottom:1px solid var(--line)}
+.eyebrow{font:11px/1 'Courier New',monospace;letter-spacing:.15em;color:var(--lime);text-transform:uppercase;margin-bottom:18px}
+h1{font-size:clamp(32px,5vw,56px);line-height:1.05;letter-spacing:-.02em;font-weight:600;margin:0 0 24px}
+.lede{font-size:19px;max-width:700px;color:#d5dad3}
+.lede strong{color:var(--lime);font-weight:600}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-block;padding:14px 22px;border:1px solid var(--lime);color:var(--lime);text-decoration:none;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.btn.solid{background:var(--lime);color:#10120e;border-color:var(--lime)}
+.btn:hover{opacity:.85}
+section{padding:54px 0;border-bottom:1px solid var(--line)}
+section h2{font-size:clamp(24px,3vw,32px);font-weight:600;margin:0 0 10px}
+.section-label{font:11px 'Courier New',monospace;letter-spacing:.15em;color:#88968b;text-transform:uppercase;margin-bottom:14px}
+.topics{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px}
+.topic{border:1px solid var(--line);padding:26px}
+.topic h3{font-size:19px;margin:0 0 10px}
+.topic p{color:var(--muted);font-size:14px;margin:0 0 16px}
+.topic a{color:var(--lime);font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px}
+.cell .num{font:11px 'Courier New',monospace;color:var(--lime);letter-spacing:.1em}
+.cell h3{font-size:18px;margin:10px 0 8px;font-weight:600}
+.cell p{color:var(--muted);font-size:14px}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:24px}
+table{width:100%;min-width:560px;border-collapse:collapse;margin:0;font-size:14px}
+th,td{border:1px solid var(--line);padding:12px 14px;text-align:left;vertical-align:top}
+th{color:var(--lime);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.versions{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:30px}
+.version{border:1px solid var(--line);padding:26px}
+.version h3{margin:0 0 8px;font-size:20px}
+.version p{color:var(--muted);font-size:14px;margin:0 0 16px}
+.founders{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:30px}
+.founder{border:1px solid var(--line);padding:24px}
+.founder .num{font:11px 'Courier New',monospace;color:var(--lime);letter-spacing:.1em}
+.founder h3{margin:10px 0 8px;font-size:20px}
+.founder p{color:var(--muted);font-size:14px}
+.tiny{font-size:12px;color:#88968b}
+footer{padding:40px 5vw 60px;display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;align-items:center;font-size:12px;color:#88968b}
+footer .links{display:flex;gap:18px;flex-wrap:wrap}
+footer a{color:#88968b;text-decoration:none}
+footer a:hover{color:var(--lime)}
+@media(max-width:850px){.topics,.grid3,.versions,.founders{grid-template-columns:1fr}nav{display:none}}
+</style>
+</head>
+<body>
+<header>
+<a class="logo" href="/marketing-simulation-lab/"><span class="mark">⚡</span>MARKETING SIMULATION LAB</a>
+<nav>
+<a href="/marketing-simulation-lab/synthetic-consumers/">Synthetic Consumers</a>
+<a href="/marketing-simulation-lab/consumer-behavior-simulation/">Simulation Method</a>
+<a href="/marketing-simulation-lab/research/">Research</a>
+<a href="/marketing-simulation-lab/about/">About</a>
+<a href="/marketing-simulation-lab/scanner/">View the demo</a>
+</nav>
+</header>
+
+<main>
+<section class="hero" style="border-top:none">
+<div class="eyebrow">Synthetic Consumer Behavior Simulation</div>
+<h1>Know what moves buyers<br>before you launch.</h1>
+<p class="lede">Marketing Simulation Lab builds <strong>synthetic consumer behavior simulation</strong> for e-commerce and product teams: we use calibrated language-model populations to diagnose buying friction, compare page and message changes, and prioritize which experiments are worth running in the real world. This is early-stage research and product development, not a replacement for human research — <strong>simulation proposes, reality decides.</strong></p>
+<div class="cta-row">
+<a class="btn solid" href="/marketing-simulation-lab/scanner/">Explore the illustrative demo ↗</a>
+<a class="btn" href="/marketing-simulation-lab/research/">See the research →</a>
+</div>
+</section>
+
+<section>
+<div class="section-label">[ What this is ]</div>
+<h2>A research-stage simulation engine, not a magic prediction machine.</h2>
+<p style="max-width:700px;color:#d5dad3">Analytics tells you what happened after launch. It rarely tells you which change to try next, or why a shopper hesitated. We connect product pages, reviews and known purchase-decision research into a simulation layer that proposes testable hypotheses about buying friction — then hands the strongest ones off to real-world experiments. We do not claim to replace human consumer research, and we do not report simulated outcomes as measured conversion lift.</p>
+<div class="grid3">
+<div class="cell"><span class="num">01 / DISCOVER</span><h3>Find the friction.</h3><p>Connect product pages with reviews, questions and available signals to surface evidence-linked hypotheses about what holds shoppers back.</p></div>
+<div class="cell"><span class="num">02 / SIMULATE</span><h3>Explore the alternatives.</h3><p>Change one decision variable and compare how a synthetic consumer population interprets information and weighs trade-offs.</p></div>
+<div class="cell"><span class="num">03 / VALIDATE</span><h3>Let reality decide.</h3><p>Take promising changes into controlled real-world tests and compare simulated rankings against observed outcomes.</p></div>
+</div>
+</section>
+
+<section>
+<div class="section-label">[ Learn the method ]</div>
+<h2>Start here</h2>
+<div class="topics">
+<div class="topic">
+<h3>What are synthetic consumers?</h3>
+<p>Definitions, how synthetic consumers differ from personas, synthetic respondents and digital twins, and when the approach does — and doesn't — apply.</p>
+<a href="/marketing-simulation-lab/synthetic-consumers/">Read the definition →</a>
+</div>
+<div class="topic">
+<h3>How consumer behavior simulation works</h3>
+<p>The input → simulate → validate pipeline, with e-commerce landing-page and product-page use cases.</p>
+<a href="/marketing-simulation-lab/consumer-behavior-simulation/">Read the method →</a>
+</div>
+<div class="topic">
+<h3>Research, calibration &amp; known limits</h3>
+<p>What we've measured so far, how we calibrate against real responses, and where simulation output should not be trusted on its own.</p>
+<a href="/marketing-simulation-lab/research/">Read the evidence →</a>
+</div>
+</div>
+</section>
+
+<section>
+<div class="section-label">[ Two interactive demonstrations ]</div>
+<h2>Explore how simulation could work</h2>
+<p style="max-width:700px;color:#d5dad3">These interactive concepts use illustrative scenarios, not live model predictions. They do not accept your own product URL or variants. Choose either demonstration below.</p>
+<div class="versions">
+<div class="version"><h3>Digital World</h3><p>An illustrative product-page playground showing hypothetical shopper responses to alternative hypotheses.</p><a class="btn" href="/marketing-simulation-lab/a/">Open Digital World ↗</a></div>
+<div class="version"><h3>Decision Intelligence Scanner</h3><p>A scanner-style walkthrough of how a simulated population reads a landing page and where it drops off.</p><a class="btn" href="/marketing-simulation-lab/scanner/">Open the Scanner ↗</a></div>
+</div>
+</section>
+
+<section>
+<div class="section-label">[ Evidence, not magic ]</div>
+<h2>Simulation proposes. Reality decides.</h2>
+<p style="max-width:700px;color:#d5dad3">We care about whether simulated decisions match what real people do — not whether synthetic output merely sounds plausible. Two early research notes, reported with their caveats:</p>
+<div class="table-wrap"><table>
+<tr><th>Research note</th><th>Result</th><th>Caveat</th></tr>
+<tr><td>Ad copy credibility (two-sided messaging)</td><td>Human survey +0.54 pts vs. simulation +0.30 pts on a 1–7 credibility scale</td><td>Direction aligned; effect sizes did not. Directional comparison only — raw responses and uncertainty were not provided in the source brief.</td></tr>
+<tr><td>Product information completeness</td><td>Simulated resolution of shopper questions rose 25–50 percentage points after clearer after-sales summaries</td><td>Internal simulation outcome, not a measured real-world conversion lift.</td></tr>
+</table></div>
+<p style="margin-top:20px"><a class="btn" href="/marketing-simulation-lab/research/">Read the full research page →</a></p>
+</section>
+
+<section>
+<div class="section-label">[ Who's behind this ]</div>
+<h2>Behavior science meets applied data science.</h2>
+<div class="founders">
+<div class="founder"><div class="num">CO-FOUNDER / CEO</div><h3>Rachel Hu</h3><p>Eight years in data science and business analytics, focused on turning complex behavior into actionable business decisions.</p></div>
+<div class="founder"><div class="num">CO-FOUNDER / CTO</div><h3>Dr. Tong Liu</h3><p>Marketing PhD specializing in consumer behavior, bringing behavioral research into the design of simulation systems.</p></div>
+</div>
+<p class="tiny" style="margin-top:20px">Page last updated 2026-11-03.</p>
+</section>
+</main>
+
+<footer>
+<span>© 2026 Marketing Simulation Lab · Early-stage research &amp; product development</span>
+<span class="links">
+<a href="mailto:rachel.qrd@gmail.com">Contact</a>
+<a href="/marketing-simulation-lab/sitemap.xml">Sitemap</a>
+<a href="/marketing-simulation-lab/robots.txt">Robots</a>
+<a href="/marketing-simulation-lab/llms.txt">llms.txt</a>
+<a href="/marketing-simulation-lab/llms-full.txt">llms-full.txt</a>
+<a href="/marketing-simulation-lab/.well-known/ai-catalog.json">AI catalog</a>
+</span>
+</footer>
+</body>
+</html>
