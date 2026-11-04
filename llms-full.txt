@@ -3,7 +3,7 @@
 Last updated: 2026-11-02
 Canonical site: https://xiao-yun-hu.github.io/marketing-simulation-lab/
 
-This file concatenates the substantive text of every core page on the site, for AI systems that read a single full-text reference rather than crawling individual pages. Each section matches the live page at the linked URL; if anything here and the live page ever disagree, the live page is authoritative.
+This file summarizes selected core pages; it is not a complete copy of every page. For full definitions, FAQs, examples and current details, read the linked pages. The live page is authoritative.
 
 ---
 
@@ -15,7 +15,7 @@ The method: (1) Discover — connect product pages with reviews, questions and a
 
 Founders: Rachel Hu, Co-Founder/CEO — eight years in data science and business analytics, focused on turning complex behavior into actionable business decisions. Dr. Tong Liu, Co-Founder/CTO — Marketing PhD specializing in consumer behavior, bringing behavioral research into the design of simulation systems.
 
-Two live product experiences: Digital World (https://xiao-yun-hu.github.io/marketing-simulation-lab/a/) and Decision Intelligence Scanner (https://xiao-yun-hu.github.io/marketing-simulation-lab/scanner/), run side by side as an ongoing design experiment. A random-entry link at /go/ assigns new visitors to one of the two.
+Two interactive concept demonstrations: Digital World (https://xiao-yun-hu.github.io/marketing-simulation-lab/a/) and Decision Intelligence Scanner (https://xiao-yun-hu.github.io/marketing-simulation-lab/scanner/). Both use illustrative scenarios, not live model predictions; neither accepts a visitor's own product URL or variants.
 
 ---
 
