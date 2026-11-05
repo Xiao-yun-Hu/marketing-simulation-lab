@@ -3,6 +3,7 @@
 > Marketing Simulation Lab builds synthetic consumer behavior simulation for e-commerce and product teams: diagnose buying friction, compare page and message changes, and prioritize which experiments are worth running in the real world. Simulation proposes; reality decides — this is a hypothesis-generation tool, not a replacement for human consumer research.
 
 ## Core pages
+- [What we do](https://xiao-yun-hu.github.io/marketing-simulation-lab/services/): Research-stage synthetic consumer simulation for e-commerce pages, intended users, limitations and contact.
 - [Home](https://xiao-yun-hu.github.io/marketing-simulation-lab/): What Marketing Simulation Lab is, who it's for, and the discover/simulate/validate approach.
 - [About the lab](https://xiao-yun-hu.github.io/marketing-simulation-lab/overview/): A text-first overview of the service, research and known limitations.
 - [What are synthetic consumers?](https://xiao-yun-hu.github.io/marketing-simulation-lab/synthetic-consumers/): Definition, comparison to marketing personas, synthetic respondents and digital twins, and when the approach does and doesn't apply.
