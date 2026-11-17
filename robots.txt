@@ -65,4 +65,4 @@ Disallow: /
 User-agent: Bytespider
 Disallow: /
 
-Sitemap: https://xiao-yun-hu.github.io/marketing-simulation-lab/sitemap.xml
+Sitemap: https://mktsimlab.com/sitemap.xml
